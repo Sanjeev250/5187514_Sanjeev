@@ -1,0 +1,32 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+void strings_xor(char *a, char *b) {
+    char result[1001];
+    int length = strlen(a);
+
+    for (int i = 0; i < length; i++) {
+        if (a[i] == b[i])
+            result[i] = '0';
+        else
+            result[i] = '1';
+    }
+
+    result[length] = '\0';
+
+    printf("%s\n", result);
+}
+
+int main() {
+    char a[1001], b[1001];
+    scanf("%s", a);
+    scanf("%s", b);
+
+    strings_xor(a, b);
+
+    return 0;
+}
